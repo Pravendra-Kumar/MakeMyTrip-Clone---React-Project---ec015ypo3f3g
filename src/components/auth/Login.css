@@ -1,0 +1,42 @@
+.login{
+    background-color:white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+}
+.login__conatainer{
+width: 300px;
+height:300px;
+left: 50%;
+top:50%;
+transform: translate(-50%, -50%);
+background: lightgrey;
+position: absolute;
+text-align: center;
+border-radius: 10px;
+}
+input{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    background: white;
+    border: 1px solid grey;
+    width: 70%;
+}
+.login__img {
+ margin-top: 20px;
+ padding: 30px auto;
+}
+.login__img > img {
+ width: 50%;
+}
+.login p{
+    color: rgb(18, 83, 18);
+    font-size: 1.5rem;
+}
+.login  h3{
+    color: rgba(0, 0, 0, 0.717);
+    font-size: 1.5rem;
+}

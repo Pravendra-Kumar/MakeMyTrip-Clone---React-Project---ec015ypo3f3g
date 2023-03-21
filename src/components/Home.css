@@ -1,0 +1,90 @@
+.home__container{
+    width: 100%;
+    background-image: linear-gradient(rgba(6,20,36,255), rgba(20,68,122,255));
+    height: 75vh;
+    position: relative;
+
+}
+.home{
+    background: #fff;
+    width: 93%;
+    margin:  auto;
+    height: 55vh;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 39%;
+    transform: translate(-50%, -42%);
+   
+}
+.home > p{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 50%;
+    transform: translate(-50%);
+    color: #3570ca;
+    margin-top: 2.5rem;
+}
+.home__dropdown{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 2.5rem;
+    padding-top: 2rem;
+    
+}
+.home__dropdown > select:hover{
+ cursor: pointer;
+}
+.home__dropdown > select{
+ padding: 0.2rem;
+ font-weight: 400;
+
+ font-size: 1.4rem;
+ outline: none;
+}
+.home__dropdown> span{
+    padding-right:0.5rem;
+}
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6rem 2.5rem;
+    flex-wrap: wrap;
+}
+.home__input {
+    width: 25%;
+   
+}
+.home__input > p{
+    font-size: 1.5rem;
+    font-weight: 400;
+   
+}
+.home__input > input[type="text"],
+.home__input > input[type="date"]{
+    border: 1px  solid lightgrey;
+    border-radius: 2px;
+    outline: none;
+    width: 95%;
+    padding: 1rem 0;
+}   
+.home__search{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:-2.3rem;
+    padding: 1rem 6rem;
+    font-size: 2rem;    
+    background-image: linear-gradient(to bottom right, rgba(78,172,253,255), rgba(8,92,243,255));
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
+}
+.home__search:hover{
+cursor: pointer;
+background-image: linear-gradient(to bottom right, rgba(8,92,243,200), rgba(8,92,243,200));
+}
+.inputs input{
+    margin-left: 0;
+}

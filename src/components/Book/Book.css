@@ -1,0 +1,76 @@
+.book__container{
+    width: 100%;
+}
+.book{
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+.fare{
+    border: 1px solid grey;
+    width: 40%;
+    padding: 2.2rem;
+    margin-left: 2rem;
+    border-radius: 10px;
+}
+.payment{
+    border: 1px solid grey;
+    width: 40%; 
+    padding: 2.2rem;
+    margin-right: 2rem;
+    border-radius: 10px;
+}
+.book p{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+.book h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.fare .row1{
+    border-bottom:2px solid grey;
+}
+
+.payment .row1{
+    border-bottom: 2px solid grey;
+}
+.payment .row3{
+    background-image: linear-gradient(to bottom right, rgba(78,172,253,255), rgba(8,92,243,255));
+    display: inline-block;
+    padding: 0.2rem 3rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+    color: #fff;
+}
+.row2{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.row2 span{
+    font-size: 1.5rem;
+}
+.payment input[type='text']{
+    border: none;
+    outline: none;
+    padding-bottom: 0rem;
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .fare{
+        width: 90vw;
+        margin: auto;
+    }
+    .payment{
+        width: 90vw;
+        margin: auto;
+        
+    }
+
+  }
