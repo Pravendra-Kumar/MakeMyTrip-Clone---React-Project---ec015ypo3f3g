@@ -2,6 +2,7 @@ import React from 'react'
 import "./HCard.css"
 import StarIcon from '@mui/icons-material/Star';
 import LuggageIcon from '@mui/icons-material/Luggage';
+import { Link } from 'react-router-dom';
 
 function HCard({hotel}) {
   return (
@@ -32,7 +33,7 @@ function HCard({hotel}) {
               <h3><StarIcon/>{hotel?hotel.guests:""}</h3>
           </div>
         </div> 
-        <div className='card__btn'>Book</div>
+        <div className='card__btn'><Link to="/book">Book</Link></div>
        </div>
     </div>
   )

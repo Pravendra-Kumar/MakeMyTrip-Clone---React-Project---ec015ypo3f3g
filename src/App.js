@@ -9,11 +9,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/auth/Login';
 import Register from "./components/auth/Register"
 import Book from './components/Book/Book';
+import DataApp from './components/DataApp';
 
 function App() {
   return (
     <>
     <BrowserRouter>  
+      <DataApp>
       <div className="App">
               <Navbar/>
 
@@ -27,6 +29,8 @@ function App() {
                   <Route path="/register" element={ <Register/>}/>
               </Routes>
       </div>
+      </DataApp>
+
      </BrowserRouter>
     </>
   

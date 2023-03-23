@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import HotelIcon from '@mui/icons-material/Hotel';
 import TrainIcon from '@mui/icons-material/Train';
 import PersonIcon from '@mui/icons-material/Person';
 import FlightIcon from '@mui/icons-material/Flight';
 import "./Navbar.css"
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { DataAppContext } from './DataApp';
 
 function Navbar() {
+
+  const localContext = useContext(DataAppContext);
+  const {appState , setAppState} = localContext;
+  const {username, loginStatus} = appState;
+  const navigate = useNavigate();
+
+
+  const logoutFn = () => {
+  
+    setAppState({
+      ...appState,
+      loginStatus: false,
+      username: ''
+    })
+    navigate('/');
+  }
+
   return (
     <div className='container'>
        <div className='navbar'>
@@ -31,11 +50,21 @@ function Navbar() {
                            <TrainIcon sx={{width:30, height:30}}/> <span>Trains</span>
                       </Link>
                   </div>
-                <div className='navbar__icon navbar__user'>
-                      <Link to='/login' >
-                         <PersonIcon sx={{width:30, height:30}}/><span>Pravendra</span>
-                      </Link>
-                  </div>
+                  {
+                  loginStatus ?
+                    <div onClick={logoutFn} className='navbar__icon navbar__user'>
+                          <Link to='/' >
+                            <PersonIcon sx={{width:30, height:30}}/><span>Logout</span>
+                          </Link>
+                      </div>
+                      :
+                      <div  className='navbar__icon navbar__user'>
+                          <Link to='/login' >
+                            <PersonIcon sx={{width:30, height:30}}/><span>Login</span>
+                          </Link>
+                      </div>
+                  }
+
                    
             </div>
        </div>

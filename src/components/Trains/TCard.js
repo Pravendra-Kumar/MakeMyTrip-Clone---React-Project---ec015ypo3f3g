@@ -1,6 +1,7 @@
 import React from 'react'
 import "./TCard.css"
 import TrainIcon from '@mui/icons-material/Train';
+import { Link } from 'react-router-dom';
 
 function TCard({train}) {
   return (
@@ -31,7 +32,7 @@ function TCard({train}) {
               <h3>{train?train.duration:""}</h3>
           </div>
         </div> 
-        <div className='card__btn'>Book</div>
+        <div className='card__btn'><Link to="/book">Book</Link></div>
        </div>
     </div>
   )

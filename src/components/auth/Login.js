@@ -1,14 +1,27 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom'
 import "./Login.css"
 import { useNavigate } from 'react-router-dom';
+import {DataAppContext} from '../DataApp';
+
 
 const Login = () => {
+
+    const navigate = useNavigate();
+    const localContext = useContext(DataAppContext);
+    // const {appState , setAppState} = localContext;
+    // const {username, loginStatus} = appState;
+    const {appState, setAppState}=localContext;
+    const {loginStatus, username}= appState;
+
+    //console.log("login status Loginpage",loginStatus);
+
+
     const initialData = {
         username: '',
         password: '',
     }
-    const navigate = useNavigate();
+   
 
     //state object for formdata
     const [loginformdata, setFormdata] = useState(initialData);
@@ -42,7 +55,11 @@ const Login = () => {
                     if(temp[i].password === loginformdata.password) {
                         console.log('Inside 2nd if - ', i)
                         setStatus(true);
-                        //set context varibale
+                        setAppState({
+                            ...appState,
+                            loginStatus: true, //true means logged in
+                            username: loginformdata.username,
+                    })                        
                         navigate('/')
 
                     }
