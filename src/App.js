@@ -10,6 +10,7 @@ import Login from './components/auth/Login';
 import Register from "./components/auth/Register"
 import Book from './components/Book/Book';
 import DataApp from './components/DataApp';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,14 +21,17 @@ function App() {
               <Navbar/>
 
               <Routes>
-                  <Route path="/" element={ <><Home/> <FlightList/></> }/>
-                  <Route path="/flight" element={<> <Home/><FlightList/></>}/>
-                  <Route path="/hotel" element={<><Home/><HotelList/></>}/>
-                  <Route path="/train" element={ <><Home/><TrainList/></>}/>
+                  <Route path="/" element={ <><Home/> <FlightList/><Footer/></> }/>
+                  <Route path="/flight" element={<> <Home/><FlightList/><Footer/></>}/>
+                  <Route path="/hotel" element={<><Home/><HotelList/><Footer/></>}/>
+                  <Route path="/train" element={ <><Home/><TrainList/><Footer/></>}/>
                   <Route path="/book" element={ <Book/>}/>
                   <Route path="/login" element={ <Login/>}/>
                   <Route path="/register" element={ <Register/>}/>
+                  
               </Routes>
+
+              
       </div>
       </DataApp>
 

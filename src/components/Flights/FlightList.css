@@ -1,6 +1,7 @@
 .flight__container{
     width: 100%;
-    background: #c2c2c2;
+    background: #f2f2f2;
+    padding-bottom: 3rem;
 }
 .flight{
     margin: 0 3rem;

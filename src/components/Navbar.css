@@ -25,6 +25,7 @@
 }
 .navbar__logo  img{
     height: 3.8rem;
+  
 }
 .navbar__icons{
     display: flex;
@@ -33,6 +34,12 @@
     margin: 3rem;
     padding: 0.5rem;
    
+}
+.navbar__username > span{
+   font-size: 1.5rem;
+   font-weight: 500;
+   color: #3570ca;
+   margin-left: 1rem;
 }
 
 .navbar__user a{
