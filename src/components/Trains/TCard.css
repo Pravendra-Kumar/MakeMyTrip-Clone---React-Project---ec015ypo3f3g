@@ -1,6 +1,6 @@
 .card__container{
     width: 100%;
-    background-color: #f2f2f2;
+    background-color: #fff;
     border-radius: 10px;
 }
 .card{
@@ -24,7 +24,7 @@
     transform: translate(-50%);
     display: inline-block;
     margin-left: 50%;
-    padding: 1rem 6rem;
+    padding: 1rem 4rem;
     font-size: 2rem;    
     background-image: linear-gradient(to bottom right, rgba(78,172,253,255), rgba(8,92,243,255));
     border-radius: 50px;

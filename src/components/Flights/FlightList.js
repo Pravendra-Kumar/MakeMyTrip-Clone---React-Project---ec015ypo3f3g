@@ -1,48 +1,65 @@
 import React, { useEffect, useState } from 'react'
 import "./FlightList.css"
 import FCard from './FCard'
+import FHome from "./FHome"
 
 
 function FlightList() {
 
-  const[flightList, setFightList]= useState([]);
+  const [from, setfrom] = useState("");
+  const [to, setTo] = useState("");
+  const [depart, setDepart] = useState("");
+  const [arrival, setArrival] = useState([]);
+  const [flights, setFlights] = useState([]);
+  const [filteredflights, setFilteredFlights] = useState([]);
 
-  useEffect(()=>{
-    getData()
-  }, [])
+  const getData = async () => {
+    await fetch(
+      "https://content.newtonschool.co/v1/pr/63b85b1209f0a79e89e17e3a/flights"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setFilteredFlights(data);
+        setFlights(data);
+      });
+  };
 
-const getData=()=>{
-
-  const url=`https://content.newtonschool.co/v1/pr/63b85b1209f0a79e89e17e3a/flights`
-   fetch(url)
-  .then((res)=>res.json())
-  .then((data)=>{
-    setFightList(data)
-    // console.log(data)
-    // console.log(data[0].from)
-  
-    });
-}
-
+  useEffect(() => {
+    getData();
+  }, []);
 
 
 
   return (
-    <div className='flight__container'>
-    <div className='flight'>
-    <h3>Available Tickets</h3>
-       <div className='flight__cards'>
-            
-       {flightList.map((flight,index)=>(
-                <FCard key={index} flight={flight} />
-      ))}
-           
-            
-          
-       </div>
-    </div>
-      
-    </div>
+    <>
+      <FHome
+        from={from}
+        setfrom={setfrom}
+        to={to}
+        setTo={setTo}
+        flightsProps={flights}
+        setFilteredFlights={setFilteredFlights}
+      />
+      <div className='flight__container'>
+        <div className='flight'>
+          <h3>Available Tickets</h3>
+          <div className='flight__cards'>
+            <FCard
+              from={from}
+              to={to}
+              depart={depart}
+              arrival={arrival}
+              flights={flights}
+              setFlights={setFlights}
+              filteredflights={filteredflights}
+              setFilteredFlights={setFilteredFlights}
+
+            />
+          </div>
+        </div>
+
+      </div>
+    </>
   )
 }
 

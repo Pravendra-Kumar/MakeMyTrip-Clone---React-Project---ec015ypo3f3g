@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
+
 import FlightList from './components/Flights/FlightList';
 import HotelList from './components/Hotels/HotelList';
 import TrainList from "./components/Trains/TrainList"
@@ -21,10 +21,10 @@ function App() {
               <Navbar/>
 
               <Routes>
-                  <Route path="/" element={ <><Home/> <FlightList/><Footer/></> }/>
-                  <Route path="/flight" element={<> <Home/><FlightList/><Footer/></>}/>
-                  <Route path="/hotel" element={<><Home/><HotelList/><Footer/></>}/>
-                  <Route path="/train" element={ <><Home/><TrainList/><Footer/></>}/>
+                  <Route path="/" element={ <><FlightList/><Footer/></> }/>
+                  <Route path="/flight" element={<><FlightList/><Footer/></>}/>
+                  <Route path="/hotel" element={<><HotelList/><Footer/></>}/>
+                  <Route path="/train" element={ <><TrainList/><Footer/></>}/>
                   <Route path="/book" element={ <Book/>}/>
                   <Route path="/login" element={ <Login/>}/>
                   <Route path="/register" element={ <Register/>}/>

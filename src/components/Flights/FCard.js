@@ -3,9 +3,24 @@ import "./FCard.css"
 import { Link } from 'react-router-dom'
 import FlightIcon from '@mui/icons-material/Flight';
 
-function FCard({flight}) {
+function FCard({
+  from,
+  to,
+  depart,
+  arrival,
+  flights,
+  setFlights,
+  filteredflights,
+  setFilteredFlights,
+}) {
   return (
     <div className='card__container'>
+
+     {filteredflights &&
+          filteredflights.map((flight,index)=>(
+               
+   
+
        <div className='card'>
          <div className='card__info'>
           <div  className='row1'>
@@ -34,6 +49,9 @@ function FCard({flight}) {
         </div> 
         <div className='card__btn'><Link to='/book'>Book</Link></div>
        </div>
+
+       ))}
+       
     </div>
   )
 }

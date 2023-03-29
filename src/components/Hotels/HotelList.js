@@ -1,48 +1,56 @@
 import React, { useEffect, useState } from 'react'
 import "./HotelList.css"
 import HCard from './HCard'
+import HHome from "./HHome"
 
 
 function HotelList() {
 
-  const[hotelList, setHotelList]= useState([]);
+  const [from, setfrom] = useState("");
 
-  useEffect(()=>{
-    getData1()
-  }, [])
+  const [hotels, setHotels] = useState([]);
+  const [filteredHotels, setFilteredHotels] = useState([]);
 
-const getData1=()=>{
+  const getData = async () => {
+    await fetch(
+      "https://content.newtonschool.co/v1/pr/63b85bcf735f93791e09caf4/hotels"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setFilteredHotels(data);
+        setHotels(data);
+      });
+  };
 
-  const url=`https://content.newtonschool.co/v1/pr/63b85bcf735f93791e09caf4/hotels`
-   fetch(url)
-  .then((res)=>res.json())
-  .then((data)=>{
-    setHotelList(data)
-    // console.log(data)
-    
-  
-    });
-}
-
-
+  useEffect(() => {
+    getData();
+  }, []);
 
 
   return (
-    <div className='flight__container'>
-    <div className='flight'>
-    <h3>Available Tickets</h3>
-       <div className='flight__cards'>
-            
-       {hotelList.map((hotel,index)=>(
-                <HCard key={index} hotel={hotel} />
-      ))}
-           
-            
-          
-       </div>
-    </div>
-      
-    </div>
+    <>
+      <HHome
+        from={from}
+        setfrom={setfrom}
+        HotelsProps={hotels}
+        setFilteredHotels={setFilteredHotels}
+      />
+
+      <div className='flight__container'>
+        <div className='flight'>
+          <h3>Available Tickets</h3>
+          <div className='flight__cards'>
+            <HCard
+              from={from}
+              hotels={hotels}
+              setHotels={setHotels}
+              filteredHotels={filteredHotels}
+              setFilteredHotels={setFilteredHotels} />
+          </div>
+        </div>
+
+      </div>
+    </>
   )
 }
 

@@ -1,73 +1,155 @@
-.book__container{
+
+ 
+  
+  .payment-container {
     width: 100%;
-}
-.book{
+    position: relative;
+  }
+  
+  .main {
+    position: absolute;
+    height: 430px;
+    left: 50%;
+    margin-top: 30px;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    margin-top: 6rem;
-    gap: 5rem;
-    flex-wrap: wrap;
-}
-.fare{
-    border: 1px solid grey;
-    width: 40%;
-    padding: 2.2rem;
-    margin-left: 2rem;
-    border-radius: 10px;
-}
-.payment{
-    border: 1px solid grey;
-    width: 40%; 
-    padding: 2.2rem;
-    margin-right: 2rem;
-    border-radius: 10px;
-}
-.book p{
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+    width: 700px;
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .right-payment-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  
+    margin: auto;
+  }
+  
+  .payment-method h2 {
+    margin-bottom: 10px;
     font-size: 1.5rem;
-    padding: 0.5rem;
-    margin-left: 1rem;
-}
-.book h3{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-.fare .row1{
-    border-bottom:2px solid grey;
-}
-
-.payment .row1{
-    border-bottom: 2px solid grey;
-}
-.payment .row3{
-    background-image: linear-gradient(to bottom right, rgba(78,172,253,255), rgba(8,92,243,255));
-    display: inline-block;
-    padding: 0.2rem 3rem;
-    border-radius: 50px;
-    margin-top: 1rem;
-    color: #fff;
-}
-.payment input[type='text']{
-    border: none;
-    outline: none;
-    padding-bottom: 0rem;
-    margin: 0;
-    width: 100%;
-}
-.fare1{
-display: flex;
-justify-content: space-between;
-font-size: 1.5rem;
-}
-
-@media screen and (max-width: 800px) {
-    .fare{
-        width: 90vw;
-        margin: auto;
-    }
-    .payment{
-        width: 90vw;
-        margin: auto;
-        
-    }
+    font-weight: 700;
+  }
+  
+  .radio-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .radio-container label:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  .card-info-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+  }
+  
+  .card-info label {
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    font-size: 1.5rem;
+  }
+  
+  .card-info input {
+    margin-top: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    letter-spacing: 0.025em;
+    height: 25px;
+  }
+  .card-info input[type='text'] {
+   outline: none;
+   padding: 1.5rem;
+  
 
   }
+  
+  .full-width {
+    width: 200px;
+    padding-left: 5px;
+  }
+  
+  .expire-ccv {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .expire-ccv input {
+    text-align: center;
+  }
+  
+  .expire-ccv label {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .expire-date {
+    border: 1px solid #333333;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .expire-date input {
+    margin: 0;
+    border: none;
+  }
+  
+  .expire-date span {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .save-card-info {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 5px;
+    margin-top: 15px;
+    letter-spacing: 0.025em;
+  }
+  
+  input {
+    background-color: #f7f7f7;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .button {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.05em;
+    color: #f7f7f7;
+    background-image: linear-gradient(to bottom right, rgba(78,172,253,255), rgba(8,92,243,255));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  button:hover {
+    background-image: linear-gradient(to bottom right, rgba(8,92,243,200), rgba(8,92,243,200));
+  }
+  
