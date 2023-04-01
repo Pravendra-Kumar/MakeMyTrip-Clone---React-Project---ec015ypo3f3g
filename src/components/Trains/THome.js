@@ -68,7 +68,7 @@ function THome({
                                 onChange={handleFromChange}
                                 defaultValue='2'
                             >
-                                <option value='' disabled>
+                                <option value='' >
                                     Select City
                                 </option>
                                 {trainOption.map((form, index) => (
@@ -86,7 +86,7 @@ function THome({
                                 onChange={handleToChange}
                                 defaultValue='2'
                             >
-                                <option value='dehli' disabled>
+                                <option value='dehli'>
                                     Select City
                                 </option>
                                 {trainOption.map((to, index) => (

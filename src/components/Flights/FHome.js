@@ -61,9 +61,9 @@ function FHome({
 
                             <select
                                 onChange={handleFromChange}
-                                defaultValue='2'
+                                defaultValue='1'
                             >
-                                <option value='' disabled>
+                                <option value='dehli' >
                                     Select City
                                 </option>
                                 {flightOption.map((form, index) => (
@@ -79,9 +79,9 @@ function FHome({
 
                             <select
                                 onChange={handleToChange}
-                                defaultValue='2'
+                                defaultValue='1'
                             >
-                                <option value='dehli' disabled>
+                                <option value='goa'>
                                     Select City
                                 </option>
                                 {flightOption.map((to, index) => (
@@ -92,6 +92,7 @@ function FHome({
                             </select>
 
                         </div>
+                    
                         <div className='departure home__input'>
                             <p>DEPARTURE DATE</p>
                             <input type="date" />

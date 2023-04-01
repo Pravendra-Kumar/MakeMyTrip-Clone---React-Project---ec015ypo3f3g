@@ -57,7 +57,7 @@ function HHome({
                                 defaultValue='1'
                                 onChange={handleFromChange}
                             >
-                                <option value='' disabled>
+                                <option value=''>
                                     Select City
                                 </option>
                                 {hotelOption.map((city, index) => (
