@@ -18,19 +18,21 @@
    
 }
 .home > p{
-    font-size: 2.5rem;
+    font-size: 3rem;
+    position: absolute;
     font-weight: 700;
     margin-left: 50%;
     transform: translate(-50%);
     color: #3570ca;
     margin-top: 2.5rem;
+    text-align: center;
 }
  
 .inputs{
-    display: flex;
+   display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 6rem 2.5rem;
+    margin: 18rem 4rem;
     flex-wrap: wrap;
 }
 .home__input {
@@ -38,23 +40,25 @@
    
 }
 .home__input > p{
-    font-size: 1.5rem;
-    font-weight: 400;
+   font-size: 2rem;
+    font-weight: bold;
    
 }
 .home__input > select{
-    border: 1px  solid lightgrey;
-    border-radius: 2px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
     outline: none;
-    width: 95%;
-    padding: 1rem 0;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
 }   
 .home__input > input[type="date"]{
-    border: 1px  solid lightgrey;
-    border-radius: 2px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
     outline: none;
-    width: 95%;
-    padding: 1rem 0;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
 }   
 .home__search{
     position: absolute;
@@ -76,4 +80,36 @@ background-image: linear-gradient(to bottom right, rgba(8,92,243,200), rgba(8,92
 
 .inputs input{
     margin-left: 0;
+}
+@media only screen and (max-width:768px){
+    .home__input {
+        width: 33%;
+       
+    }
+    .home__input > select {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+    .home__input > input[type="date"] {  
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+    .home__input > p {
+        font-size: 1.2rem;
+    }
+    .inputs {
+        margin: 13rem 1rem;
+    }
+    .home > p {
+        font-size: 2.2rem;
+    }
+    .home__container{
+        height: 50vh;
+    }
+    .home{
+        height: 35vh;
+    }
+    .home__search{
+        padding: 1rem 3rem;
+    }
 }

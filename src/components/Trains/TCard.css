@@ -15,16 +15,16 @@
    
 }
 .card__info{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-   align-items:start;
+   align-items:start; */
     font-size: 1.5rem;
 }
 .card__btn{
     transform: translate(-50%);
     display: inline-block;
     margin-left: 50%;
-    padding: 1rem 4rem;
+    padding: 0.5rem 4rem;
     font-size: 2rem;    
     background-image: linear-gradient(to bottom right, rgba(78,172,253,255), rgba(8,92,243,255));
     border-radius: 50px;

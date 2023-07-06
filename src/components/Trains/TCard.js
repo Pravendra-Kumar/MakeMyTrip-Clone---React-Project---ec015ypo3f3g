@@ -19,28 +19,28 @@ function TCard({ from,
 
           <div className='card'>
             <div className='card__info'>
+            <div className='row1'>
+            <p>Train No: <span>{train ? train.train_number : ""}</span></p>
+            </div>
               <div className='row1'>
-                <p>from:</p>
-                <h3>{train ? train.from : ""}</h3>
-                <p>to:</p>
-                <h3>{train ? train.to : ""}</h3>
-                <p>Train No:</p>
-                <h3>{train ? train.train_number : ""}</h3>
+                <p>from:  <span>{train ? train.from : ""}</span></p>
+                <p>Duration:  <span>{train ? train.duration : ""}</span></p>
+                <p>to: <span>{train ? train.to : ""}</span></p>
+             
               </div>
               <div className='row2'>
-                <p>departure:</p>
-                <h3>{train ? train.departure.departureTime : ""}</h3>
-                <p>Date:</p>
-                <h3>{train ? train.departure.departureDate : ""}</h3>
-                <h1><TrainIcon sx={{ width: 30, height: 30 }} /></h1>
+              
+                <p>Date: <span>{train ? train.departure.departureDate : ""}</span></p>
+                <p>departure: <span>{train ? train.departure.departureTime : ""}</span></p>
+                
               </div>
               <div className='row3'>
-                <p>Price:</p>
-                <h3>{train ? train.price : ""}</h3>
-                <p>KM:</p>
-                <h3>{train ? train.kilometers : ""}</h3>
-                <p>Duration:</p>
-                <h3>{train ? train.duration : ""}</h3>
+               
+                <p>KM:  <span>{train ? train.kilometers : ""}</span></p>
+                <p>Price: <span>{train ? train.price : ""}</span></p>
+               
+                
+               
               </div>
             </div>
             <div className='card__btn'><Link to="/book">Book</Link></div>

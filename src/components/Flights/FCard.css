@@ -15,10 +15,15 @@
    
 }
 .card__info{
+    /* display: flex;
+    justify-content: space-between;
+    align-items:start; */
+    font-size: 1.5rem;
+}
+.card .row1, .card .row2 ,.card .row3{
     display: flex;
     justify-content: space-between;
-   align-items:start;
-    font-size: 1.5rem;
+    padding: 3px;
 }
 .card__btn{
     transform: translate(-50%);
@@ -38,4 +43,8 @@
     color: #fff;
     font-size:2rem;
     font-weight: 700;
+}
+.card span{
+    font-size: 1.5rem;
+    font-weight: bold;
 }

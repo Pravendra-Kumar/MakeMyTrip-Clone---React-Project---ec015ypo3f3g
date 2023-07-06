@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import HotelIcon from '@mui/icons-material/Hotel';
 import TrainIcon from '@mui/icons-material/Train';
-import PersonIcon from '@mui/icons-material/Person';
+
 import FlightIcon from '@mui/icons-material/Flight';
 import "./Navbar.css"
 import { Link } from 'react-router-dom';
@@ -36,23 +36,21 @@ function Navbar() {
         </div>
         <div className='navbar__icons'>
           <div className='navbar__icon active'>
-            <Link to='/flight'>
-              <FlightIcon sx={{ width: 30, height: 30 }} /><span>Flights</span>
+            <Link to='/flight'><FlightIcon sx={{ width: 30, height: 30 }} /><span>Flights</span>
             </Link>
           </div>
           <div className='navbar__icon'>
             <Link to='/hotel' >
-              <HotelIcon sx={{ width: 30, height: 30 }} /> <span>Hotels</span>
+              <HotelIcon sx={{ width: 30, height: 30 }} /><span>Hotels</span>
             </Link>
           </div>
           <div className='navbar__icon'>
-            <Link to='/train' >
-              <TrainIcon sx={{ width: 30, height: 30 }} /> <span>Trains</span>
+            <Link to='/train' ><TrainIcon sx={{ width: 30, height: 30 }} /><span>Trains</span>
             </Link>
           </div>
           {
             username && <div className='navbar__icon navbar__username'>
-                <span>Hi-{username}</span>
+                <span>{username}</span>
             </div>
           }
 
@@ -60,13 +58,13 @@ function Navbar() {
             loginStatus ?
               <div onClick={logoutFn} className='navbar__icon navbar__user'>
                 <Link to='/' >
-                  <PersonIcon sx={{ width: 30, height: 30 }} /><span>Logout</span>
+                  <span>Logout</span>
                 </Link>
               </div>
               :
               <div className='navbar__icon navbar__user'>
                 <Link to='/login' >
-                  <PersonIcon sx={{ width: 30, height: 30 }} /><span>Login</span>
+                  <span>Login</span>
                 </Link>
               </div>
           }

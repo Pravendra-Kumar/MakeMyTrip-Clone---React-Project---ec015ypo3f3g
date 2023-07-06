@@ -3,7 +3,7 @@
     background: #fff;
 }
 .flight{
-    margin: 0 3rem;
+    margin: 0 7rem;
     padding: 3rem 0;
 }
 .flight > h3{
@@ -15,4 +15,14 @@
 .flight__cards{
  width: 60%;
  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+    .flight__cards{
+        width: 100%;
+    }
+    .flight{
+        margin: 0 1.5rem;
+        
+    }
+   
 }

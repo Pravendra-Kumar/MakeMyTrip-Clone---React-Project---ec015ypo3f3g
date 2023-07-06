@@ -7,11 +7,11 @@
     top: 0;
 }
 .login__conatainer{
-width: 300px;
-height:300px;
+width: 350px;
+height:350px;
 left: 50%;
-top:50%;
-transform: translate(-50%, -50%);
+top:15%;
+transform: translate(-50%, 0%);
 background: lightgrey;
 position: absolute;
 text-align: center;

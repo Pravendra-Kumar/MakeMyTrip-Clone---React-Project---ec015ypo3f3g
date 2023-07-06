@@ -8,11 +8,11 @@
 
 }
 .register__conatainer{
-width: 300px;
-height:300px;
+width: 350px;
+height:350px;
 left: 50%;
-top:50%;
-transform: translate(-50%, -50%);
+top:15%;
+transform: translate(-50%, 0%);
 background: lightgrey;
 position: absolute;
 text-align: center;
@@ -42,7 +42,8 @@ input{
     font-size: 1.5rem;
 }
 .btn{
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
+    font-size: 1.6rem;
     cursor: pointer;
     border-radius: 50px;
     border: none;

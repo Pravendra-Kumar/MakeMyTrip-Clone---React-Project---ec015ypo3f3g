@@ -9,10 +9,10 @@
 .navbar{
     width: 100%;
     background: #fff;
-    margin:0 auto;
+   
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 3rem;
     align-items: center;
     height: 6rem;
     
@@ -91,3 +91,27 @@ a{
     color: #3570ca;
 }
 
+@media only screen and (max-width:768px){
+    .navbar__logo {
+        margin-left: -25px;
+        padding: 0px;
+    } 
+    .navbar__logo img {
+        height: 2rem;
+    }
+    .navbar__icon a {
+        
+        padding: 0px;
+        
+    }
+    
+    .navbar__icon > a{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar__icons {
+        
+        margin: 0;
+        padding: 0rem;
+    }
+}
